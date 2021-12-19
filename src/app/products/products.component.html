@@ -1,0 +1,67 @@
+<!-- 
+
+<div class="row">
+    <div class="col-md-5">
+        <router-outlet></router-outlet>
+        <app-product-list></app-product-list>
+    </div>
+</div> -->
+
+<div class="carsoual-container" dir="{{textDir}}">
+    <div class="row">
+    <div class="col-md-5">
+        <!-- <router-outlet></router-outlet> -->
+    </div>
+    </div>
+    <br>
+    <!-- <h1>أضيف مؤخـرا</h1>
+
+    <app-product-list></app-product-list> -->
+    <router-outlet></router-outlet>
+    
+    <h1>{{ 'recently' | translate }}</h1>
+    <br>
+    <hr>
+    <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+        <div class="item"  *ngFor="let item of products;let i = index" [attr.data-slide-to]="i" [index]="i">
+            <a  style="cursor: pointer;"
+            [routerLink]="[i]"
+            >
+            <img class="responsive-img"  [src]="item.url">
+            <div class="carousel-caption d-none d-md-block">
+               <h5 [textContent]="item.title"></h5>
+             </div>
+            </a>
+        </div>
+    
+    </owl-carousel> 
+    <h1>{{ 'products-t' | translate }}</h1>
+    <br>
+    <hr>
+    
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+    <a [routerLink]="['/products-list-taliah/wooden-wall']">
+     <div class="item">
+         <img class="responsive-img"  src="\assets\imag44-2.jpg">
+     </div>
+    </a>
+     <a [routerLink]="['/products-list-taliah/gysum']">
+     <div class="item">
+        <img class="responsive-img"  src="\assets\Lay in - ظاهر.jpg">
+    </div></a>
+    <a [routerLink]="['/products-list-taliah/interior-exterior-paints']">
+    <div class="item">
+        <img class="responsive-img"  src="\assets\smart_stone2 (1).jpg">
+    </div></a>
+    <a [routerLink]="['/customized-products/blind-customized-list']">
+    <div class="item">
+        <img class="responsive-img"  src="\assets\wooden blinds1.jpg">
+    </div></a>
+    <a [routerLink]="['/products-list-taliah/wooden-floor']">
+    <div class="item">
+        <img class="responsive-img" src="\assets\imag11.jpg">
+    </div>
+    </a>
+ </owl-carousel>
+
+</div>

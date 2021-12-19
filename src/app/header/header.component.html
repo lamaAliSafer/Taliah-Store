@@ -1,0 +1,165 @@
+
+<header class="sticky-header z-header" dir="{{textDir}}">
+	<div id="nav-desktop"> 
+	<div class="info notification-bar reveal" style="background-color: rgb(0, 0, 109);" ng-controller="Ctrl">
+		<a id="top-announcement-bar-link" href="">
+			<p style="color: rgb(255, 255, 244);" >{{ 'WELCOME' | translate }}</p></a> 
+		</div>
+	<div class="header-top">
+	<div class="buttons-left"><!----> 
+		<button id="nav-toggle" type="button" class="hamburger hamburger--spin-r js-hamburger nav-menu-icon">
+			<span class="hamburger-box">
+				<span class="hamburger-inner">
+
+				</span></span></button></div>
+				 <nav id="main-nav" class="main nav section-shipping-and-payment">
+					 <ul><li><a href="" class="router-link-exact-active router-link-active">{{ 'payment' | translate }}</a>
+					</li></ul></nav>
+					 <span><a href="/" class="logo store-logo router-link-active" id="header-store-logo">
+						<img src="https://media.zid.store/cdn-cgi/image/h=200,q=100,f=auto/https://media.zid.store/548c795a-b9a1-48fe-96d2-d324cf67d96a/8b148256-1e61-4710-ab50-ef8b96b2111d-200x.png" alt="Taliah Store" class="logo-img-unviel" style="width: auto; height: 100%;">
+					</a></span>
+					 <div class="header-links">
+						 <div id="header-shipping-country-store-language-form" class="currency-language-switcher d-xl-flex align-items-center d-none">
+							<div id="element" class="btn btn-default show-modal">
+								<i class="fas fa-chevron-down"></i></div>
+							<span class="text store-language">السعودية</span>
+							<span class="text store-country">{{textLan}}</span></div> 
+							 <div class="search-header">
+								 <form name="search-form" onkeypress="return event.keyCode != 13;" class="h-search form conceal" style="position: relative; bottom: 5px;">
+								<div class="form-group">
+								<input type="search" id="" placeholder="ابحث في المتجر" autocomplete="off" class="form-control search-field"> <!----> <!----></div></form> 
+								<a  id="header-search-toggle" class="search-toggle search-icon"><svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-237.000000, -34.000000)" fill="#4A4A4A" stroke="#4A4A4A"><g><g transform="translate(237.000000, 34.000000)"><path d="M9.53490566,16.9320755 C5.45283019,16.9320755 2.13207547,13.6122642 2.13207547,9.53207547 C2.13207547,5.45188679 5.45283019,2.13207547 9.53490566,2.13207547 C13.6169811,2.13207547 16.9377358,5.45188679 16.9377358,9.53207547 C16.9377358,13.6122642 13.6169811,16.9320755 9.53490566,16.9320755 M20.8349057,20.0339623 L15.9509434,15.1518868 C17.2698113,13.65 18.0698113,11.6830189 18.0698113,9.53207547 C18.0698113,4.82735849 14.2415094,1 9.53490566,1 C4.82924528,1 1,4.82735849 1,9.53207547 C1,14.2367925 4.82924528,18.0641509 9.53490566,18.0641509 C11.6830189,18.0641509 13.6481132,17.2660377 15.15,15.9518868 L20.0339623,20.8339623 C20.1443396,20.9443396 20.2896226,21 20.4339623,21 C20.5792453,21 20.7235849,20.9443396 20.8349057,20.8339623 C21.0556604,20.6132075 21.0556604,20.254717 20.8349057,20.0339623" id="-g-Search"></path></g></g></g></g></svg></a></div>
+								 <a routerLink="/taliah-sign-in" class="login customer-login" id="header-customer-login" *ngIf="loginbtn">{{ 'login' | translate }}</a> 
+								 <!-- <a  routerLink="/cart" id="header-search-toggle" class="search-toggle search-icon"><svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-237.000000, -34.000000)" fill="#4A4A4A" stroke="#4A4A4A"><g><g transform="translate(237.000000, 34.000000)"><path d="M8.22648284,16.1393874 C9.29201191,16.1393874 10.1567891,17.0041646 10.1567891,18.0696937 C10.1567891,19.1352228 9.29201191,20 8.22648284,20 C7.16095376,20 6.29617655,19.1352228 6.29617655,18.0696937 C6.29617655,17.0041646 7.16095376,16.1393874 8.22648284,16.1393874 Z M15.4782575,16.1393874 C16.5437866,16.1393874 17.4085638,17.0041646 17.4085638,18.0696937 C17.4085638,19.1352228 16.5437866,20 15.4782575,20 C14.4127284,20 13.5479512,19.1352228 13.5479512,18.0696937 C13.5479512,17.0041646 14.4127284,16.1393874 15.4782575,16.1393874 Z M19.2422583,4.24088292 C19.7325561,4.82480058 19.9371685,5.59113217 19.8049425,6.34202132 L18.5116373,12.7043109 C18.2973733,13.921369 17.2318443,14.8151008 15.9810058,14.8151008 L7.81677533,14.8151008 C6.54856409,14.8151008 5.45408043,13.8692507 5.27070133,12.6135865 L2.81921234,2.42060409 C2.70918488,1.67936647 2.10692932,1.15914893 1.40912359,1.15914893 L0.579091887,1.15914893 C0.258661043,1.15914893 2.84217094e-14,0.899522732 2.84217094e-14,0.580057041 C2.84217094e-14,0.259626196 0.258661043,0 0.579091887,0 L1.40912359,0 C2.67733483,0 3.77181849,0.946815236 3.95616274,2.20151433 L6.40668658,12.3944967 C6.51767919,13.1366995 7.1189696,13.656917 7.81677533,13.656917 L15.9810058,13.656917 C16.6681948,13.656917 17.2540428,13.1656541 17.3737218,12.4871514 L18.667027,6.12582702 C18.7374832,5.72818392 18.6245603,5.30641199 18.3552825,4.985016 C18.0850396,4.66362 17.690292,4.4802409 17.2714155,4.4802409 L9.30214602,4.4802409 C8.98268033,4.4802409 8.72305413,4.22061471 8.72305413,3.90018386 C8.72305413,3.58071817 8.98268033,3.32109197 9.30214602,3.32109197 L17.2714155,3.32109197 C18.0338865,3.32109197 18.7519605,3.65696527 19.2422583,4.24088292 Z" id="-g-Search"></path></g></g></g></g></svg></a> -->
+								 <a class="navbar-brand" routerLink="/cart">
+								 <i style="font-size:30px;" class="fas fa-cart-plus"><span class="cart">{{itemInCart}}</span></i></a>
+								 <a href="" *ngIf="logoutbtn">Welcome</a>
+								<a href="" *ngIf="logoutbtn" (click)="logout()">Logout</a>
+<!-- <a href="" class="cart-toggle no-border d-block d-md-none"> <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" class="cart-icon"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-176.000000, -34.000000)" fill="#4A4A4A" stroke="#4A4A4A"><g><g transform="translate(177.000000, 35.000000)"><path d="M8.22648284,16.1393874 C9.29201191,16.1393874 10.1567891,17.0041646 10.1567891,18.0696937 C10.1567891,19.1352228 9.29201191,20 8.22648284,20 C7.16095376,20 6.29617655,19.1352228 6.29617655,18.0696937 C6.29617655,17.0041646 7.16095376,16.1393874 8.22648284,16.1393874 Z M15.4782575,16.1393874 C16.5437866,16.1393874 17.4085638,17.0041646 17.4085638,18.0696937 C17.4085638,19.1352228 16.5437866,20 15.4782575,20 C14.4127284,20 13.5479512,19.1352228 13.5479512,18.0696937 C13.5479512,17.0041646 14.4127284,16.1393874 15.4782575,16.1393874 Z M19.2422583,4.24088292 C19.7325561,4.82480058 19.9371685,5.59113217 19.8049425,6.34202132 L18.5116373,12.7043109 C18.2973733,13.921369 17.2318443,14.8151008 15.9810058,14.8151008 L7.81677533,14.8151008 C6.54856409,14.8151008 5.45408043,13.8692507 5.27070133,12.6135865 L2.81921234,2.42060409 C2.70918488,1.67936647 2.10692932,1.15914893 1.40912359,1.15914893 L0.579091887,1.15914893 C0.258661043,1.15914893 2.84217094e-14,0.899522732 2.84217094e-14,0.580057041 C2.84217094e-14,0.259626196 0.258661043,0 0.579091887,0 L1.40912359,0 C2.67733483,0 3.77181849,0.946815236 3.95616274,2.20151433 L6.40668658,12.3944967 C6.51767919,13.1366995 7.1189696,13.656917 7.81677533,13.656917 L15.9810058,13.656917 C16.6681948,13.656917 17.2540428,13.1656541 17.3737218,12.4871514 L18.667027,6.12582702 C18.7374832,5.72818392 18.6245603,5.30641199 18.3552825,4.985016 C18.0850396,4.66362 17.690292,4.4802409 17.2714155,4.4802409 L9.30214602,4.4802409 C8.98268033,4.4802409 8.72305413,4.22061471 8.72305413,3.90018386 C8.72305413,3.58071817 8.98268033,3.32109197 9.30214602,3.32109197 L17.2714155,3.32109197 C18.0338865,3.32109197 18.7519605,3.65696527 19.2422583,4.24088292 Z" id="-g-Cart"></path></g></g></g></g></svg></a> <span class="userMenu-indicator"></span>  -->
+			
+<form name="search-form" onkeypress="return event.keyCode != 13;" class="search form conceal">
+				<div class="form-group">
+					</div> <!----></form></div></div>
+					
+					<nav id="categories-nav" class="main categories nav z-header-main-menu">
+						<ul id="menuHorizontalLinks" >
+						<li><a [routerLink]="['/product-list']"  class="item-all-products">{{ 'products' | translate }}</a></li>
+						 <li class="has-sub"><a [routerLink]="['/products-list-taliah/gysum']" class="">{{ 'false' | translate }}</a></li>
+								<li class="has-sub" style="display: list-item;"><a [routerLink]="['/products-list-taliah/pvc']" class="">{{ 'pvc' | translate }}</a> </li>
+										<li class="" style="display: list-item;"><a  [routerLink]="['/products-list-taliah/wooden-floor']" class="">{{ 'woodenf' | translate }}</a> <!----></li>
+										<li class="has-sub" style="display: list-item;"><a [routerLink]="['/products-list-taliah/interior-exterior-paints']" class="">{{ 'smart' | translate }}</a> </li>
+										<li class="" style="display: list-item;"><a [routerLink]="['/products-list-taliah/wooden-wall']" class="">{{ 'wall' | translate }}</a> <!----></li>
+										<li class="" style="display: list-item;"><a [routerLink]="['/products-list-taliah/fans']" class="">{{ 'fans' | translate }}</a> <!----></li>
+					                    <li class="" style="display: list-item;"><a [routerLink]="['/products-list-taliah/silicone']" class="">{{ 'silicone' | translate }}</a> <!----></li>
+					                    <li style="display: list-item;"><a [routerLink]="['/customized-products/folding-customized-list']" class="item-all-categories">{{ 'fold-doors' | translate }}</a></li>
+					                    <li style="display: list-item;"><a [routerLink]="['/customized-products/blind-customized-list']" class="item-all-categories">{{ 'blinds' | translate }}</a></li>
+					                    <li style="display: list-item;"><a [routerLink]="['/customized-products/stair-customized-list']" class="item-all-categories">{{ 'staircase' | translate }}</a></li>
+
+								
+								  </ul></nav></div>
+
+					<div class="mobile mobile-two">
+						<div class="header">
+							<div class="menu-toggle">
+					<div class="logo"   dir="auto">
+			  <a href="index.php"><img src="assets/logo-deleb-withoutcolor.png"></a>
+			  </div>
+
+			  <div class="line"></div>
+					<div class="line"></div>
+				</div> 
+			</div>
+						<div class="mobile-nav">
+							<ul>
+					<li><a href="">Home</a></li>
+				<li><a href="">Products</a></li>
+				<li><a routerLink="/taliah-sign-in" class="login customer-login" id="header-customer-login" *ngIf="loginbtn">{{ 'login' | translate }}</a></li>
+				<li><a href="" *ngIf="logoutbtn" (click)="logout()">Logout</a></li>
+
+							</ul>
+				
+					<div class="social-taltah">
+					<ul>
+					<li>
+				  <a href="https://twitter.com/taliah_group" target="_blank" style="color:white;"><i class="fab fa-twitter" style="margin-right: 10px; margin-top: 70px;" aria-hidden="true"></i></a>
+				  </li>
+			<li>
+					<a href="https://www.instagram.com/taliah_group/?hl=en" target="_blank" style="color:white;"><i class="fab fa-instagram" style="margin-right: 10px; margin-top: 70px;" aria-hidden="true"></i></a>
+			</li>
+			<li> <a href="" style="color:white;" target="_blank"><i class="fas fa-map-marker-alt" style="margin-right: 10px; margin-top: 70px;" aria-hidden="true"></i></a>
+			</li>
+			<li> <a href="https://www.facebook.com/taliahgroup.sa" style="color:white;" target="_blank"><i class="fab fa-facebook-f" style="margin-right: 10px; margin-top: 70px;" aria-hidden="true"></i></a>
+			</li>
+			<li>
+			<a href="https://api.whatsapp.com/send?phone=+966505904152" style="color:white;" target="_blank"><i class="fab fa-whatsapp" style="margin-right: 10px; margin-top: 70px;" aria-hidden="true"></i></a></li>
+			
+					</ul>
+					</div>
+			
+				  
+						</div>
+					</div>
+					
+				</header>
+				
+
+
+				<div id="testmodal" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title"></h4>
+							</div>
+						
+							<div class="modal-body"><form method="post" action="https://taliahstore.com/customer/lang-shipping-country" class="form"><input type="hidden" name="_token" value="BACzcXuAp4zNYK65bdLbS2qtwShITDNN7uIY0RT2"> 
+								<input type="hidden" name="redirect_to" value="/"> <input type="hidden" name="permalink" value="https://taliahstore.com/"> 
+								<input type="hidden" name="currency_symbol" value="س.ر."> 
+								<input type="hidden" name="currency" value="SAR"> 
+								<div class="form-group-container d-flex justify-content-between">
+									<div class="form-group d-flex flex-column flex-grow-2"><label for="lang" class="px-2">
+										<h4 class="title">اللغة</h4></label> 
+										<div class="select-with-arrow d-inline-block">
+											<select #langSelect (change)="changeLang(langSelect.value)">  
+												<option *ngFor="let lang of translateService.getLangs()" [value]="lang" [selected]="lang === translateService.currentLang">
+													{{lang}}
+												</option>
+												<!-- <option value="ar">العربية</option>
+												<option value="en">English</option> -->
+												
+											</select></div></div> 
+											
+											<div class="form-group d-flex flex-column flex-grow-2">
+												<label for="cur" class="px-2"><h4 class="title">الشحن الى</h4></label> 
+												<div class="select-with-arrow d-inline-block">
+													<span></span>
+													<select id="cur" name="country">
+														<option value="SA">السعودية</option></select>
+													</div></div></div>
+														 <br><br>
+															</form></div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="testmodal-1" class="modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Confirmation</h4>
+							</div>
+							<div class="modal-body">
+								<p>Do you want to save changes you made to document before closing?</p>
+								<p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>

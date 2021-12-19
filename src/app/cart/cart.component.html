@@ -1,0 +1,197 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+  <ng-container *ngIf="items.length > 0">
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th style="width:50%">Product</th>
+        <th style="width:10%">Price</th>
+        <th style="width:8%">Quantity</th>
+        <th style="width:22%" class="text-center">Subtotal</th>
+        <th style="width:10%"></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of items; let i = index">
+      <tr>
+        <td data-th="Product">
+          <div class="row">
+            <div class="col-sm-2 hidden-xs">
+              <div class="imgBox">
+                <img [src]="item.url[0]" alt="" class="img">
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <h4 class="nomargin">{{item.name}}</h4>
+              <p>{{item.desc}}</p>
+            </div>
+          </div>
+        </td>
+        <td data-th="Price">{{item.price | currency}}</td>
+        <td data-th="Quantity">
+          <input type="number" class="qty" [value]="item.qty" (blur)="validateInput($event, i)">
+
+        </td>
+        <td data-th="Subtotal" class="text-center">{{item.price * item.qty|currency}}</td>
+        <td class="actions" data-th="">
+          <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+          <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o" (click)="onDelete(i)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="visible-xs">
+        <td class="text-center"><strong>Total : {{ total | currency }}</strong></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+        <td colspan="2" class="hidden-xs"></td>
+        <td class="hidden-xs text-center"><strong>Total {{ total | currency }}</strong></td>
+        <td><a href="#" class="btn btn-success btn-block" (click)="onCheckout()">Checkout <i class="fa fa-angle-right"></i></a></td>
+      </tr>
+    </tfoot>
+  </table>
+</ng-container>
+</div>
+
+
+<div class="empty" *ngIf="items.length < 1">
+<div class="info">
+  <h4>You dont have any items in your list</h4>
+  <a routerLink="" class="btn btn-success">Start Shopping</a>
+</div>
+</div>
+
+<!-- <ng-container *ngIf="items.length > 0">
+  <div class="cart" *ngFor="let item of items; let i = index">
+    <i class="fa fa-trash text-danger" aria-hidden="true" (click)="onDelete(i)"></i>
+    <div class="imgBox">
+      <img [src]="item.url[0]" alt="" class="img">
+    </div>
+    <div class="desc">
+      {{item.desc}}
+    </div>
+    <div class="price">
+      {{item.price | currency}}
+    </div>
+    <input type="number" class="qty" [value]="item.qty" (blur)="validateInput($event, i)">
+    <div class="subtotal">
+      {{item.price * item.qty|currency}}
+    </div>
+  </div>
+  <div class="checkout">
+    <div>Subtotal</div>
+    <b>$0</b>
+    <div>Shipping</div>
+    <b>$0</b>
+    <div>Total</div>
+    <b>{{ total | currency }}</b>
+
+    <button class="btn btn-success" (click)="onCheckout()">
+      Check Out
+    </button>
+  </div>
+</ng-container> -->
+<!-- 
+<ng-container *ngIf="products.length !=0">
+<div class="container">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i =index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.title}}</td>
+                        <td><img style="width: 120px;" src="{{item.url}}"></td>
+                        <td>{{item.symmery}}</td>
+                        <td>{{item.priceprod}}</td>
+                        <td>12</td>
+                        <td>1000</td>
+                        <td>
+                            <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <div class="card-title">
+                <h5>My Cart</h5>
+            </div>
+            <div class="center">
+                <img src="https://blog.sellfy.com/wp-content/uploads/2020/03/add-a-shopping-cart-website.png">
+                <h4>Empty</h4>
+                <h6>Add Item to your cart</h6>
+                <button class="btn btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</ng-container> -->
+
+
+<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th style="width:50%">Product</th>
+        <th style="width:10%">Price</th>
+        <th style="width:8%">Quantity</th>
+        <th style="width:22%" class="text-center">Subtotal</th>
+        <th style="width:10%"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-th="Product">
+          <div class="row">
+            <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive" /></div>
+            <div class="col-sm-10">
+              <h4 class="nomargin">Product 1</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </td>
+        <td data-th="Price">$5.11</td>
+        <td data-th="Quantity">
+          <input type="number" class="form-control text-center" value="1">
+        </td>
+        <td data-th="Subtotal" class="text-center">$5.11</td>
+        <td class="actions" data-th="">
+          <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+          <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="visible-xs">
+        <td class="text-center"><strong>Total $ 5.11</strong></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+        <td colspan="2" class="hidden-xs"></td>
+        <td class="hidden-xs text-center"><strong>Total $ 5.11</strong></td>
+        <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+      </tr>
+    </tfoot>
+  </table>
+</div> -->

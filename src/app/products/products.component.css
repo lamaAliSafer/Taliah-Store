@@ -1,0 +1,36 @@
+.carsoual-container{
+    max-width:1490px;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+  }
+  .responsive-img{
+    width: 100%;
+  }
+
+  .item{
+       padding: 0 15px;
+  }
+  
+h1{
+    font-family: Effra-M;
+     font-size: 1.875rem;
+    color: #484848;
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+[dir="rtl"] h1{
+  float: right;
+
+}
+[dir="ltr"] h1{
+  float: left;
+
+}
+@font-face {
+    font-family: Effra-M;
+    src: url(src\assets\fonts\alfont_com_AlFont_com_Effra_Md-1.ttf);
+  }
+  

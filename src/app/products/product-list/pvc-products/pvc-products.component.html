@@ -1,0 +1,51 @@
+<!-- <div class="row">
+    <div class="col-sm-8 col-md-2">
+        <div class="images" *ngFor="let image of product.url; let i = index">
+            <img [src]="image" alt="" (mouseenter)="displayedImg = i">
+        </div>
+    <div >
+        <img [src]="product.url[displayedImg]" alt=""style="width:150%">
+    </div>
+    <div class="col-sm-12 offset-md-1 col-md-4">
+       <h3>{{ product.name }}</h3> 
+        <h5>{{ product.desc }}</h5>
+       <h2>{{ product.price }}</h2>
+
+       <button class="btn btn-info">Add to Cart</button>
+    </div>
+</div> -->
+
+<div class="container py-5">
+	<div class="row">
+		<div class="col-sm-12 col-md-4">
+				<div class="swiper-container product-slider mb-3">
+					<div class="swiper-wrapper">
+                        <div *ngFor="let image of product.url; let i = index">
+                            <img class="img-fluid"  [src]="image" alt="" (mouseenter)="displayedImg = i">
+                        </div>
+					</div>
+				</div>
+		</div>
+
+        <div class="col-sm-12 col-md-5">
+            <div class="swiper-container product-slider mb-3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img [src]="product.url[displayedImg]" alt=""style="width:120%">
+                    </div>
+            
+                </div>
+            </div>
+        
+    </div>
+
+    <div class="col-lg-6 mb-5 mb-lg-0">
+        <h3>{{ product.name }}</h3> 
+         <h5>{{ product.desc }}</h5>
+        <h2>{{ product.price | currency }}</h2>
+ 
+        <button class="btn btn-info" (click)="addToCart(product)">Add to Cart</button>
+     </div>
+
+	</div>
+</div>

@@ -1,0 +1,202 @@
+<router-outlet></router-outlet>
+
+<br><br>
+<div class="carsoual-container">
+
+    <a href=""><h1>PVC</h1></a>
+    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			 <div class="center-border"></div>
+      <div class="space-40"></div>
+		</div>
+	</div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+     <div class="item"  *ngFor="let item of products;let i = index" [attr.data-slide-to]="i" [index]="i">
+         <a  style="cursor: pointer;"
+         [routerLink]="[i]"
+         >
+         <img class="responsive-img"  [src]="item.url">
+         <h1>{{item.title}}</h1>
+         <div class="carousel-caption d-none d-md-block">
+          </div>
+         </a>
+     </div>
+ 
+ </owl-carousel> 
+
+ <hr>
+<h1>SILK PLASTER</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of Silkproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/silk-plaster-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+  
+</owl-carousel>
+
+<hr>
+<h1>SMART STONE</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of Smartproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/smart-stone-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+
+<hr>
+<h1>GYPSUM CEILING</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of Gypsumproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/gypsum-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+<hr>
+<h1>ALUMINUM CEILING</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of Aluminumproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/aluminum-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+<hr>
+<h1>FANS</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of Fansproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/fans-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+
+<hr>
+<h1>WOODEN WALL PANELS</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of WoodenWallproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/wooden-wall-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+
+<hr>
+<h1>WOODEN FLOOR</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of WoodenFloorproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/wooden-floor-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+
+<hr>
+<h1>SILICONE</h1>
+ <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+     <div class="wpb_wrapper">
+          <div class="center-border"></div>
+   <div class="space-40"></div>
+     </div>
+ </div>
+ <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+  <div class="item"  *ngFor="let item of Siliconeproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+      <a  style="cursor: pointer;"
+      [routerLink]="['/silicone-list', i]"
+      >
+      <img class="responsive-img"  [src]="item.url">
+      <h1>{{item.title}}</h1>
+      <div class="carousel-caption d-none d-md-block">
+       </div>
+      </a>
+  </div>
+
+</owl-carousel>
+</div>
+<!-- <app-silk-plaster-list></app-silk-plaster-list> -->
+

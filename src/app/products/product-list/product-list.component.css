@@ -1,0 +1,90 @@
+
+/* .responsive-img{
+    width: 100%;
+  }
+
+  .item{
+       padding: 0 15px;
+  } */
+
+  .carsoual-container{
+     max-width:1490px;
+     width:100%;
+     margin:0 auto;
+     position:relative;
+   }
+   .responsive-img{
+     width: 100%;
+   }
+ 
+   .item{
+        padding: 0 15px;
+   }
+   
+ h1{
+  text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 1.2121212121212121212121212121212em;
+    color: #0c0c0c;
+    text-align: center;
+    visibility: visible;
+    -webkit-transform: translateY(0) scale(1);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.85s ease-in-out 0s, opacity 0.85s ease-in-out 0s;
+    transition: transform 0.85s ease-in-out 0s, opacity 0.85s ease-in-out 0s;
+ }
+ .wpb_content_element {
+  margin-bottom: 0px;
+}
+.center-border {
+  width: 30%;
+  margin: 0 auto;
+  height: 2px;
+  background: #f5f5f5;
+  position: relative;
+  margin-bottom: 20px;
+}
+.center-border:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #1D2951;
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  top: -3px;
+}
+.space-40 {
+  width: 100%;
+  height: 40px;
+}
+
+h1{
+   font-size: 20px;
+   line-height: 1.733333333333333em;
+   font-family: Georgia,serif;
+   text-align: center;
+   font-weight: bold;
+ 
+ }
+ [dir="ltr"] h1{
+   float: left;
+   font-size: 20px;
+   line-height: 1.733333333333333em;
+   font-family: Georgia,serif;
+   text-align: center;
+   font-weight: bold;
+ 
+ }
+ @font-face {
+     font-family: Effra-M;
+     src: url(src\assets\fonts\alfont_com_AlFont_com_Effra_Md-1.ttf);
+   }
+   

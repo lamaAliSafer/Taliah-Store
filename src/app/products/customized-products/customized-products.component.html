@@ -1,0 +1,141 @@
+<!-- <router-outlet></router-outlet>
+
+<div class="element">
+    <header>FOLDING DOORS</header>
+    <picture>
+     
+<ul class="slides">
+  <input type="radio" name="radio-btn" id="img-1" checked />
+  <li class="slide-container">
+  <div class="slide">
+    <img src="/assets/images/folding-doors/image (7).jpg" />
+      </div>
+  <div class="nav">
+    <label for="img-6" class="prev">&#x2039;</label>
+    <label for="img-2" class="next">&#x203a;</label>
+  </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-2" />
+  <li class="slide-container">
+      <div class="slide">
+        <img src="/assets/images/folding-doors/image (9).jpg" />
+      </div>
+  <div class="nav">
+    <label for="img-1" class="prev">&#x2039;</label>
+    <label for="img-3" class="next">&#x203a;</label>
+  </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-3" />
+  <li class="slide-container">
+      <div class="slide">
+        <img src="/assets/images/folding-doors/image (10).jpg" />
+      </div>
+  <div class="nav">
+    <label for="img-2" class="prev">&#x2039;</label>
+    <label for="img-4" class="next">&#x203a;</label>
+  </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-4" />
+  <li class="slide-container">
+      <div class="slide">
+        <img src="/assets/images/folding-doors/image (11).jpg" />
+      </div>
+  <div class="nav">
+    <label for="img-3" class="prev">&#x2039;</label>
+    <label for="img-5" class="next">&#x203a;</label>
+  </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-5" />
+  <li class="slide-container">
+      <div class="slide">
+        <img src="/assets/images/folding-doors/image (12).jpg" />
+      </div>
+  <div class="nav">
+    <label for="img-4" class="prev">&#x2039;</label>
+    <label for="img-6" class="next">&#x203a;</label>
+  </div>
+  </li>
+
+  <input type="radio" name="radio-btn" id="img-6" />
+  <li class="slide-container">
+      <div class="slide">
+        <img src="/assets/images/folding-doors/fooldingdoors.jpg" />
+      </div>
+  <div class="nav">
+    <label for="img-5" class="prev">&#x2039;</label>
+    <label for="img-1" class="next">&#x203a;</label>
+  </div>
+  </li>
+
+  <li class="nav-dots">
+    <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+    <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+    <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+    <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+    <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+    <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+  </li>
+</ul>
+     </picture>
+    <main>
+      <p>Folding doors, also known as bi-fold doors. A modern, functional and sophisticated door set that adds a beautiful artistic touch to the interior decor . which represent the ideal solution to the interior decoration problems for civil houses,offices, commercial.</p>
+      <p style="color:red;font-size:20px;">For orders and inquiries: <br>Tel : 2701848 <br>Tel : 2702630</p>
+
+    </main>
+
+  </div>
+
+<br><br>
+<div class="carsoual-container">
+
+    <hr>
+    <h1>FOLDING DOORS</h1>
+     <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+         <div class="wpb_wrapper">
+              <div class="center-border"></div>
+       <div class="space-40"></div>
+         </div>
+     </div>
+     <owl-carousel [options]="homeSlider" [carouselClasses]="['owl-theme','customClassName']">
+      <div class="item"  *ngFor="let item of FoldingDoorproducts;let i = index" [attr.data-slide-to]="i" [index]="i">
+          <a  style="cursor: pointer;">
+          <img class="responsive-img"  [src]="item.url">
+          <h1>{{item.title}}</h1>
+          <div class="carousel-caption d-none d-md-block">
+           </div>
+          </a>
+      </div>
+    
+    </owl-carousel>
+</div> -->
+<div style="--primary-color:#00006d;--btn-default-text-color:#fffff4;--btn-default-border-color:#000063;--btn-default-background-color:#00006d;--btn-pressed-text-color:#ffffff;--btn-pressed-border-color:#000063;--btn-pressed-background-color:#000063;--btn-hover-background-color:#000076;">
+<div id="store" class="d-flex flex-column justify-content-between spring-page-content theme-spring" style="overflow-y: unset;">
+ <div class="page-container products-container z-categories-list-view z-page-container sticky-header-margin-announcement">
+  <main class="content-container scroll-offset">
+  <div class="page-title z-categories-list-view-title">
+  <div class="container">
+    <h1>{{ 'prod' | translate }}</h1>
+  </div></div> 
+  <div class="container">
+    <div  class="row grid-categories hidden-xs hidden-sm">
+
+                            <div  class="col-md-8">
+                              <div class="item-category" style="margin: 22px 0px;">
+                                <a  class=""></a> 
+                                <div class="item-category-details"><a class="">{{ 'products-t' | translate }}</a>
+                                   <div>
+                                     <div>
+                                       <ul class="tree" >
+                                         <li  class=""><a [routerLink]="['/customized-products/folding-customized-list']" class="">{{ 'fold-doors' | translate }}</a></li> <!---->
+                                         <li  class=""><a [routerLink]="['/customized-products/blind-customized-list']" class="">{{ 'blinds' | translate }}</a></li> <!---->
+                                         <li  class=""><a [routerLink]="['/customized-products/stair-customized-list']" class="">{{ 'staircase' | translate }}</a></li> <!---->
+                                        </ul></div></div></div></div>
+                                        </div></div></div>
+                                                </main>
+                                              </div>
+                                              </div>
+                                              </div>

@@ -1,0 +1,64 @@
+
+<!-- <h2 class="text-center">Login</h2>
+<div class="row">
+<div class="col-md-4">
+</div>
+<div class="col-md-4 col-md-offset-5">
+<div class="jumbotron">
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="Password">Password</label>
+<input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+</div>
+<button type="submit" class="btn btn-success" >Login</button>
+<div>
+  Don't have an account? <a routerLink="/sign-up">Sign Up Now</a>
+</div>
+</form>
+</div>
+</div>
+<div class="col-md-5">
+  
+</div>
+</div> -->
+<!-- style login -->
+
+    <div class="login-card" >
+        <div class="login-card-content">
+          <div class="header">
+          
+            <h2>Taliah Company</h2>
+          </div>
+          <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+          <div class="form">
+            <div class="form-field username">
+              <div class="icon">
+                <i class="far fa-user"></i>
+              </div>
+              <input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+            </div>
+            <div class="form-field password">
+              <div class="icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-success" >Login</button>
+
+            <div>
+              Don't have an account? <a routerLink="/sign-up">Sign Up Now</a>
+            </div>
+          </div>
+        </form>
+        </div>
+        <div class="login-card-footer">
+          <a href="">Forgot password?</a>
+        </div>
+      </div>
+    <!-- <app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home> -->
+    <!-- <app-home-user *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home-user> -->
+    <!-- <app-products *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-products> -->

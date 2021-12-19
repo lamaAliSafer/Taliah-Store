@@ -1,0 +1,38 @@
+<body>
+    <div class="login-card" *ngIf="!isSignedIn">
+        <div class="login-card-content">
+          <div class="header">
+          
+            <h2>Taliah Company</h2>
+          </div>
+          <div class="form">
+            <div class="form-field username">
+              <div class="icon">
+                <i class="far fa-user"></i>
+              </div>
+              <input  placeholder="Username" type="text" #email>
+            </div>
+            <div class="form-field password">
+              <div class="icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <input placeholder="Password" type="text" #password>
+            </div>
+      
+            <!-- <button type="submit">
+              Login
+            </button> -->
+            <button (click)="onSignin(email.value,password.value)">Sign In</button>
+            <div>
+              Don't have an account? <a routerLink="/sign-up">Sign Up Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="login-card-footer">
+          <a href="">Forgot password?</a>
+        </div>
+      </div>
+    <app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home>
+</body>
+
+

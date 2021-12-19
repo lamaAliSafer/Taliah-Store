@@ -1,0 +1,111 @@
+<!-- <div *ngIf="!isSignedIn">
+    <h2>Sign Up </h2>
+    <input type="text" #emailSignup>
+    <input type="text" #passwordSignup>
+    <button (click)="onSignup(emailSignup.value,passwordSignup.value)">Sign up</button>
+    <p>already have an <a routerLink="/sign-in">account?</a></p>
+</div>
+ -->
+<!-- <body>
+    <div class="login-card" *ngIf="!isSignedIn">
+        <div class="login-card-content">
+          <div class="header">
+          
+            <h2>Taliah Company</h2>
+          </div>
+          <div class="form">
+            <div class="form-field username">
+              <div class="icon">
+                <i class="far fa-user"></i>
+              </div>
+              <input  placeholder="Username" type="text" #emailSignup>
+            </div>
+            <div class="form-field password">
+              <div class="icon">
+                <i class="fas fa-lock"></i>
+              </div>
+              <input placeholder="Password" type="text" #passwordSignup>
+            </div>
+      
+          
+            <button (click)="onSignup(emailSignup.value,passwordSignup.value)">Sign up</button>
+            <div>
+                already have an  <a routerLink="/taliah-sign-in">account?</a>
+            </div>
+          </div>
+        </div>
+        <div class="login-card-footer">
+          <a href="">Forgot password?</a>
+        </div>
+      </div>
+    <app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home>
+</body>
+<app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home> -->
+
+<!-- <h2 class="text-center">Registration</h2>
+<div class="row">
+<div class="col-md-3">
+</div>
+<div class="col-md-6 col-md-offset-3">
+<div class="jumbotron">
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" name="name" formControlName="name" autocomplete="off" class="form-control input-sm" placeholder="Name">
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="Password">Password</label>
+<input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+</div>
+<button type="submit" class="btn btn-success" >Register</button>
+</form>
+</div>
+</div>
+<div class="col-md-3">
+</div>
+</div> -->
+
+<!-- register style -->
+
+<div class="login-card" >
+  <div class="login-card-content">
+    <div class="header">
+    
+      <h2>Taliah Company</h2>
+    </div>
+    <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+      <div class="form">
+        <div class="form-field username">
+          <div class="icon">
+            <i class="far fa-user"></i>
+          </div>
+          <input type="text" name="name" formControlName="name" autocomplete="off" class="form-control input-sm" placeholder="Name">
+        </div>
+      <div class="form-field username">
+        <div class="icon">
+          <i class="far fa-user"></i>
+        </div>
+        <input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+      </div>
+      <div class="form-field password">
+        <div class="icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-success" >Register</button>
+
+      <div>
+        Already have an <a routerLink="/taliah-sign-in">account</a>
+      </div>
+    </div>
+  </form>
+  </div>
+  <div class="login-card-footer">
+    <a href="">Forgot password?</a>
+  </div>
+</div>
